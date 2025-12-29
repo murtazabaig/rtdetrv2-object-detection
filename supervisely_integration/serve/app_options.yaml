@@ -1,3 +1,0 @@
-pretrained_models: true
-custom_models: true
-supported_runtimes: ["pytorch", "onnxruntime", "tensorrt"]
