@@ -1,0 +1,17 @@
+services:
+  rtdetrv2:
+    image: supervisely/rt-detrv2:1.0.38-deploy
+    shm_size: 1g
+    runtime: nvidia
+    env_file:
+      - ~/supervisely.env
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    expose:
+      - "8000"
+    command: ["deploy"]
